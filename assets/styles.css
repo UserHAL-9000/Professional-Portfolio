@@ -1,0 +1,252 @@
+:root {
+    --bg-dark-grey: rgb(55, 54, 54);
+    --text-white: white;
+    --text-blue: rgb(92, 213, 246);
+    --light-blue: rgb(22, 243, 254);
+    --dark-blue: rgb(27, 5, 219);
+
+}
+
+
+body {
+    background-color: var(--bg-dark-grey);
+    color: var(--text-white);
+    line-height: 1.2;
+
+}
+
+header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: linear-gradient(var(--dark-blue) 0%,
+            var(--light-blue) 100%);
+}
+
+/* Profile image */
+
+header div img {
+    width: 150px;
+    height: 150px;
+    float: right;
+
+}
+
+a {
+    color: var(--text-white)
+}
+
+
+/* Contact Information */
+.footer {
+    padding: 60px;
+    clear: both;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+main {
+    padding: 16px;
+}
+
+main section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+code {
+    border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-blue);
+
+}
+
+h1 {
+    margin: 24px 0;
+}
+
+h5 {
+    margin: 60px;
+}
+
+p {
+    margin: 0 0 16px 0;
+}
+
+header p {
+    padding: 0 15%;
+}
+
+.border-radius {
+    border-radius: 5px;
+}
+
+/* Large project card */
+.Big-card {
+    flex: 0 0 100%;
+    flex-basis: 700px;
+    max-width: 100%;
+    padding: 10px;
+    color: var(--light-blue);
+    font-size: 1rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.Big-card h3 {
+    position: relative;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border: 1px solid var(--text-white);
+    margin-top: -30px;
+    margin-bottom: 30px;
+    background-color: var(--bg-dark-grey);
+}
+
+.Big-card .card-column {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid var(--text-white);
+    height: 100%;
+}
+
+.Big-card .card-column pre {
+    flex: 1;
+    padding: 0 16px;
+    white-space: break-spaces;
+    background-image: linear-gradient(var(--dark-blue) 0%,
+            var(--light-blue) 100%);
+}
+
+/* Coming soon Cards */
+.card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 30px;
+    color: var(--light-blue);
+    font-size: .9rem;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.card h3 {
+    position: relative;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border: 1px solid var(--text-white);
+    margin-top: -30px;
+    margin-bottom: 30px;
+    background-color: var(--bg-dark-grey);
+}
+
+.card-column {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid var(--text-white);
+    height: 100%;
+}
+
+
+/* About Me Section */
+.About-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 30px;
+    color: var(--light-blue);
+    font-size: .9rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.About-card h3 {
+    position: relative;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border: 1px solid var(--text-white);
+    margin-top: -30px;
+    margin-bottom: 30px;
+    background-color: var(--bg-dark-grey);
+}
+
+.About-card .card-column {
+    display: 1;
+    padding: 16px;
+    border: 1px solid var(--text-white);
+    height: 100%;
+}
+
+.About-card code {
+    font-family: monospace;
+    font-size: .9rem;
+    color: var(--text-white);
+    font-stretch: expanded;
+}
+
+.About-card .card-column pre {
+    padding: 0 16px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-image: linear-gradient(var(--dark-blue) 0%,
+            var(--light-blue) 100%);
+}
+
+/* Glow effect */
+
+.card-column:hover,
+.card-column:hover h3 {
+    transition: all 0.5s ease-in-out;
+    box-shadow: inset 0px 0px 8px var(--light-blue), 0 0 15px var(--light-blue);
+}
+
+.card .card-column pre {
+    flex: 1;
+    padding: 0 16px;
+    white-space: break-spaces;
+    background-image: linear-gradient(var(--dark-blue) 0%,
+            var(--light-blue) 100%);
+}
+
+.card .card-column pre:active {
+    user-select: all;
+}
+
+.card code {
+    font-family: monospace;
+    font-size: .9rem;
+    color: var(--text-white);
+}
+
+.card__image {
+    border-radius: 5px;
+    width: 100%;
+    object-fit: fill;
+}
+
+.Big-card pre img {
+    border-radius: 10px;
+    width: 100%;
+    object-fit: fill;
+}
+
+
+@media screen and (min-width: 768px) {
+    .card {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .card {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+
+}
